@@ -1,13 +1,79 @@
-body {
+:root{
+  --primary:#2B3856;
+  --secondary:#4682b4;
+  --dark:#2B3856;
+  --light:#728FCE;
+
+}
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+body{
+  background-color: var(--light);
+}
+.App{
+  display: flex;
+  min-height: 100vh;
+  align-items: center ;
+  justify-content: center;
+  padding: 10px;
+}
+.cal{
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--dark);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.2);
+}
+.display{
+  padding: 18px;
+  text-align: right;
+  background-color: var(--secondary);
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+.display span{
+  font-size: 12px;
+  color:#B7CEEC;
+}
+button{
+  appearance: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 18px;
+  padding: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+button:hover{
+  opacity: 0.9;
+}
+.operators{
+  display: flex;
+}
+.operators button{
+  flex: 1 1 0%;
+  background-color: var(--light);
+  font-weight: 700;
+}
+.digits{
+  display: flex;
+  flex-wrap: wrap;
+}
+.digits button{
+  flex: 1 1 33.333%;
+  max-width: 33.333%;
+  background-color: var(--dark);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.cancel button{
+  background-color: red;
+  width: 100%;
+  font-weight: 700;
 }
